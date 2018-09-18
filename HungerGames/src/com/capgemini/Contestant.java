@@ -2,14 +2,14 @@ package com.capgemini;
 
 public abstract class Contestant {
 
-    protected Gender gender;
-    protected int attack, defence, health;
-    protected boolean hasBattleItem;
+    private Gender gender;
+    private int attackBonus, defenceBonus, health;
+    private boolean hasBattleItem;
 
-    public Contestant(Gender gender, int attack, int defence, int health, boolean hasBattleItem){
+    public Contestant(Gender gender, int attackBonus, int defenceBonus, int health, boolean hasBattleItem){
         setGender(gender);
-        setAttack(attack);
-        setDefence(defence);
+        setAttack(attackBonus);
+        setDefence(defenceBonus);
         setHealth(health);
         this.hasBattleItem = hasBattleItem;
     }
@@ -22,17 +22,17 @@ public abstract class Contestant {
     }
 
     protected void setAttack(int attack){
-        this.attack = attack;
+        this.attackBonus = attack;
     }
     protected int getAttack(){
-        return attack;
+        return attackBonus;
     }
 
     protected void setDefence(int defence){
-        this.defence = defence;
+        this.defenceBonus = defence;
     }
     protected int getDefence(){
-        return defence;
+        return defenceBonus;
     }
 
     protected void setHealth(int health){
