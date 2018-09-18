@@ -6,12 +6,12 @@ public abstract class Contestant {
     private int attackBonus, defenceBonus, health;
     private boolean hasBattleItem;
 
-    public Contestant(Gender gender, int attackBonus, int defenceBonus, int health, boolean hasBattleItem){
+    public Contestant(Gender gender, int attackBonus, int defenceBonus, int health){
         setGender(gender);
         setAttack(attackBonus);
         setDefence(defenceBonus);
         setHealth(health);
-        this.hasBattleItem = hasBattleItem;
+        this.hasBattleItem = false;
     }
 
     protected void setGender(Gender gender){
