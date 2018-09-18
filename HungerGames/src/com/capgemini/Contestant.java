@@ -56,4 +56,12 @@ public abstract class Contestant {
         return hasBattleItem;
     }
 
+
+    public String toString(){
+        return  "AttackBonus: " + attackBonus + "\n" +
+                "DefenceBonus: " + defenceBonus + "\n" +
+                "Health: " + health + "\n" +
+                "Has a battle item: " + hasBattleItem;
+    }
+
 }

@@ -7,4 +7,8 @@ public class CareerContestant extends Contestant {
         //As a Career contestant, you get a battle item to start with.
         giveBattleItem(5, 0);
     }
+    public String toString(){
+        return "This contestant has the following information: \n" +
+                "Is a Career contestant \n"+ super.toString();
+    }
 }
