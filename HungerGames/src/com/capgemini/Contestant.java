@@ -5,6 +5,7 @@ public abstract class Contestant {
     private Gender gender;
     private int attackBonus, defenceBonus, health;
     private boolean hasBattleItem;
+    BattleItem battleItem;
 
     public Contestant(Gender gender, int attackBonus, int defenceBonus, int health){
         setGender(gender);
@@ -42,13 +43,14 @@ public abstract class Contestant {
         return health;
     }
 
-    protected void giveBattleItem(){
+    protected void giveBattleItem(int attackBoost, int defenceBoost){
         if(hasBattleItem){
-            System.out.println("Battle item given, but already had battle item. TODO");
             return;
         }
-        else
+        else{
             hasBattleItem = true;
+            battleItem = new BattleItem(attackBoost, defenceBoost);
+        }
     }
     protected boolean isHasBattleItem(){
         return hasBattleItem;
