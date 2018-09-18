@@ -5,6 +5,7 @@ public abstract class Contestant {
     private Gender gender;
     private int contestantNumber, attackBonus, defenceBonus, health;
     private boolean hasBattleItem;
+    private boolean alive;
     BattleItem battleItem;
 
     public Contestant(Gender gender, int contestantNumber, int attackBonus, int defenceBonus, int health){
@@ -14,6 +15,7 @@ public abstract class Contestant {
         setDefence(defenceBonus);
         setHealth(health);
         this.hasBattleItem = false;
+        this.alive = true;
     }
 
     protected void setGender(Gender gender){
@@ -62,6 +64,13 @@ public abstract class Contestant {
     }
     protected boolean isHasBattleItem(){
         return hasBattleItem;
+    }
+
+    protected void die(){
+        alive = false;
+    }
+    protected boolean isAlive(){
+        return alive;
     }
 
 
