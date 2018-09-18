@@ -3,12 +3,13 @@ package com.capgemini;
 public abstract class Contestant {
 
     private Gender gender;
-    private int attackBonus, defenceBonus, health;
+    private int contestantNumber, attackBonus, defenceBonus, health;
     private boolean hasBattleItem;
     BattleItem battleItem;
 
-    public Contestant(Gender gender, int attackBonus, int defenceBonus, int health){
+    public Contestant(Gender gender, int contestantNumber, int attackBonus, int defenceBonus, int health){
         setGender(gender);
+        setContestantNumber(contestantNumber);
         setAttack(attackBonus);
         setDefence(defenceBonus);
         setHealth(health);
@@ -20,6 +21,13 @@ public abstract class Contestant {
     }
     protected Gender getGender(){
         return gender;
+    }
+
+    protected void setContestantNumber(int contestantNumber){
+        this.contestantNumber = contestantNumber;
+    }
+    protected int getContestantNumber(){
+        return contestantNumber;
     }
 
     protected void setAttack(int attack){
@@ -58,10 +66,11 @@ public abstract class Contestant {
 
 
     public String toString(){
-        return  "AttackBonus: " + attackBonus + "\n" +
+        return  "Contestant number: " + contestantNumber + "\n" +
+                "AttackBonus: " + attackBonus + "\n" +
                 "DefenceBonus: " + defenceBonus + "\n" +
                 "Health: " + health + "\n" +
-                "Has a battle item: " + hasBattleItem;
+                "Has a battle item: " + hasBattleItem + "\n";
     }
 
 }

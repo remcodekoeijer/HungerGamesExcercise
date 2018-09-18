@@ -23,7 +23,7 @@ public class GamesController {
                 defenceBonus = getRandomNumberInRange(8, 13);
                 health = getRandomNumberInRange(15, 30);
 
-                contestants[i] = new CareerContestant(gender, attackBonus, defenceBonus, health);
+                contestants[i] = new CareerContestant(gender, i, attackBonus, defenceBonus, health);
             }
             else{
                 gender = randomGender();
@@ -31,7 +31,7 @@ public class GamesController {
                 defenceBonus = getRandomNumberInRange(8, 13);
                 health = getRandomNumberInRange(15, 30);
 
-                contestants[i] = new DistrictContestant(gender, attackBonus, defenceBonus, health);
+                contestants[i] = new DistrictContestant(gender, i, attackBonus, defenceBonus, health);
             }
         }
 
